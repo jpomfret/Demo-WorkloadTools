@@ -1,0 +1,33 @@
+{
+    "Controller": {
+ 
+        "Listener":
+        {
+            "__type": "ExtendedEventsWorkloadListener",
+            "ConnectionInfo":
+            {
+                "ServerName": "localhost,2500",
+                "DatabaseName": "AdventureWorks2022",
+                "UserName": "sqladmin",
+                "Password": "dbatools.IO"
+            },
+            "DatabaseFilter": "AdventureWorks2022"
+        },
+ 
+        "Consumers":
+        [
+            {
+                "__type": "AnalysisConsumer",
+                "ConnectionInfo":
+                {
+                    "ServerName": "localhost,2500",
+                    "DatabaseName": "workloadtools",
+                    "SchemaName": "perftest",
+                    "UserName": "sqladmin",
+                    "Password": "dbatools.IO"
+                },
+                "UploadIntervalSeconds": 60
+            }
+        ]
+    }
+}
