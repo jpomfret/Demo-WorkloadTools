@@ -69,5 +69,9 @@ docker run -p 2600:1433 --volume shared:/shared:z --name mssql2 --hostname mssql
 1. Run the workload viewer to view `baseline` and `perftest` results
 
 ```powershell
-& ("{0}\workloadtools\workloadviewer.exe" -f $env:ProgramFiles) -S mssql1 -D workloadtools -M baseline -U sqladmin -P dbatools.IO -T mssql1 -E workloadtools -N perftest -V sqladmin -P dbatools.IO
+& ("{0}\workloadtools\workloadviewer.exe" -f $env:ProgramFiles) -S mssql1 -D workloadtools -M baseline -U sqladmin -P dbatools.IO -T mssql1 -E workloadtools -N perftest -V sqladmin -Q dbatools.IO
 ```
+
+![Workload differences](workloadAfter.png)
+![Queries After both tests](image/queriesAfter.png)
+![Query Details](image/queryDetails.png)
